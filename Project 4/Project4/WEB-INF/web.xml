@@ -1,0 +1,42 @@
+<web-app>
+  <display-name>
+      Project 4
+  </display-name>
+
+  <description>
+    Create a three-tier web-based application using servlets and JSP technology.
+  </description>
+
+  <!--Servlet Def-->
+  <servlet>
+    <servlet-name>alpha</servlet-name>
+    <servlet-class>queryServlet</servlet-class>
+
+    <init-param>
+     <param-name>dbDriver</param-name>
+     <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+
+    <init-param>
+     <param-name>dbName</param-name>
+     <param-value>jdbc:mysql://localhost:3306/Project4</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>root</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>client</param-value>
+    </init-param>
+
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>alpha</servlet-name>
+    <url-pattern>/sqlServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
